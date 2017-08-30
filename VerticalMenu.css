@@ -1,0 +1,78 @@
+@charset "utf-8";
+/* CSS Document */
+
+	html, body, #page
+		{
+/*			height:100%;*/
+/*			width:100%;*/
+			margin:0;
+			padding:0;
+			max-width: 100%;
+			background-color:black;
+		}
+
+	body::-webkit-scrollbar
+		{
+    		width: 4em;
+		}
+
+	body::-webkit-scrollbar-thumb
+		{
+  			background-color: darkgrey;
+  			outline: 1px solid slategrey;
+		}
+
+	img.thumbnail
+		{
+			width:400px;
+			margin-bottom: 0px;
+			resize: none;
+			float: left; margin: 0px 0px 0px 0px;
+			margin-left:8px;
+			margin-top:8px;
+			margin-right:8px;
+		}
+		
+	h1.songTitle
+		{
+			font-family: Gotham, Arial,sans-serif;
+			font-weight: normal;
+			color: white;
+			font-size: 40px;
+			margin: 0;
+			margin-left:14px;
+			letter-spacing: 3px;
+			font-weight: bold;
+		}
+	
+	h2.artistName
+		{
+			font-family: Gotham, Arial,sans-serif;
+			font-weight: normal;
+			color: white;
+			font-size: 35px;
+			margin: 0;
+			margin-left:14px;
+			letter-spacing: 3px;
+		}
+	
+	h3.app
+		{
+			font-family: Gotham, Arial,sans-serif;
+			font-weight: normal;
+			color: white;
+			font-size: 15px;
+			margin: 0;
+			margin-left:14px;
+		}
+	
+	td
+		{
+			border-style: solid;
+			border-color: red;
+			border-width: 0px;
+			width: 357px;
+			height: 272px;
+			background: #242122;
+			vertical-align: top;
+		}  

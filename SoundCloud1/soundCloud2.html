@@ -1,0 +1,60 @@
+<!doctype html>
+<html>
+<script>
+	function setValue(val)
+		{
+			parent.location.hash = val;
+		}
+	function setValues(val1, val2)
+		{
+			parent.location.hash = val1+"#"+val2;
+		}
+	
+</script>
+<style>
+		html, body, #page {
+		height:100%;
+		width:100%;
+		margin:0;
+		padding:0;
+		max-width: 100%;
+	}
+
+	#header {
+		margin:0;
+		padding:0;
+		height:20px;
+		background-color:green;
+	}
+
+
+	::-webkit-scrollbar {
+		width: 0px;  /* remove scrollbar space */
+		background: transparent;  /* optional: just make scrollbar invisible */
+	}
+	/* optional: show position indicator in red */
+	::-webkit-scrollbar-thumb {
+		background: #FF0000;
+	}
+
+</style>
+<head>
+<meta charset="utf-8">
+<title>Untitled Document</title>
+</head>
+
+
+<body>
+	<div>
+		<img src="1.PNG" width="178" height="179" alt="" onclick="setValues('https://soundcloud.com/user-717458456/g-sox-reloaded-earslime','popup1.html')"/>
+		<img src="2.PNG" width="182" height="181" alt="" onclick="setValues('https://soundcloud.com/thebroadcastsonline/chandelier-the-broadcasts','popup2.html')"/>
+	  	<img src="3.PNG" width="181" height="182" alt="" onclick="setValues('https://soundcloud.com/plex-auchta/demanded-with-bosmink','popup3.html')"/>
+		<img src="4.PNG" width="181" height="180" alt="" onclick="setValues('https://soundcloud.com/birnabeatz/indepentend-decliration','popup4.html')"/>
+		<img src="5.PNG" width="180" height="181" alt="" onclick="setValues('https://soundcloud.com/subchain_official/subchain-indepentend-original-mix','popup5.html')"/>
+	</div>
+	<div>
+    	<img src="play.png" width="180" height="60" alt="" onclick="setValue('play')"/>
+    	<img src="pause.png" width="180" height="60" alt="" onclick="setValue('pause')"/>
+    </div>
+</body>
+</html>

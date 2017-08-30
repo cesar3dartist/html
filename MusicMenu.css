@@ -1,0 +1,102 @@
+@charset "utf-8";
+/* CSS Document */
+
+	html, body, #page
+		{
+			height:100%;
+			width:100%;
+			margin:0;
+			padding:0;
+			max-width: 100%;
+			background-color:transparent;
+			white-space: nowrap;
+		}
+	
+	body{overflow-y: hidden;}
+	
+	#header
+		{
+			margin:0;
+			padding:0;
+			height:20px;
+			background-color:green;
+		}
+	
+	div.row
+		{
+			height: auto;
+			white-space: nowrap;
+			display: inline-block;
+		}
+
+	img.thumbnail
+		{
+			width:329px;
+			height:177px;
+			margin-bottom: 0px;
+			resize: none;
+			margin-left:14px;
+			margin-top:8px;
+		}
+		
+	h1.songTitle
+		{
+			font-family: Gotham, Arial,sans-serif;
+			font-weight: normal;
+			color: white;
+			font-size: 30px;
+			margin: 0;
+			margin-left:14px;
+		}
+	
+	h2.artistName
+		{
+			font-family: Gotham, Arial,sans-serif;
+			font-weight: normal;
+			color: white;
+			font-size: 20px;
+			margin: 0;
+			margin-left:14px;
+		}
+	
+	h3.app
+		{
+			font-family: Gotham, Arial,sans-serif;
+			font-weight: normal;
+			color: white;
+			font-size: 15px;
+			margin: 0;
+			margin-left:14px;
+		}
+	
+	div.song
+		{
+			border-style: solid;
+			border-color: white;
+			border-width: 3px;
+			width: 357px;
+			height: 272px;
+			resize:none;
+			margin:14px;
+			background: #242122;
+
+		}  
+	.song:hover
+		{
+			background: #504a1a;
+		}
+	
+	.form-group
+		{
+  			white-space: nowrap;
+		}
+	.form-group > div
+		{
+  			display: inline-block;
+  			
+		}
+
+/*	::-webkit-scrollbar {
+		width: 0px; 
+		background: transparent; 
+}*/

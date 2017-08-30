@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<script type="text/javascript" src="http://www.youtube.com/player_api"></script>
+<script type="text/javascript" src="//code.jquery.com/jquery-1.8.3.js"></script>
+<script type="text/javascript">
+	$(window).load(function(){
+		players = new Array();
+
+		function onYouTubeIframeAPIReady() {
+			var temp = $("iframe.yt_players");
+			for (var i = 0; i < temp.length; i++) {
+				var t = new YT.Player($(temp[i]).attr('id'), {
+					events: {
+						'onStateChange': onPlayerStateChange
+					}
+				});
+				players.push(t);
+			}
+
+		}
+		onYouTubeIframeAPIReady();
+
+
+		function onPlayerStateChange(event) {
+
+			if (event.data == YT.PlayerState.PLAYING) {
+				var temp = event.target.a.src;
+				var tempPlayers = $("iframe.yt_players");
+				for (var i = 0; i < players.length; i++) {
+					if (players[i].a.src != temp) players[i].stopVideo();
+
+				}
+			}
+		}
+		});
+
+	</script>
+	<script>
+	  // tell the embed parent frame the height of the content
+	  if (window.parent && window.parent.parent){
+		window.parent.parent.postMessage(["resultsFrame", {
+		  height: document.body.getBoundingClientRect().height,
+		  slug: "Y8P7y"
+		}], "*")
+	  }
+</script>
+<style>
+		html, body, #page {
+		height:100%;
+		width:100%;
+		margin:0;
+		padding:0;
+		max-width: 100%;
+	}
+
+	#header {
+		margin:0;
+		padding:0;
+		height:20px;
+		background-color:green;
+	}
+
+
+	::-webkit-scrollbar {
+		width: 0px;  /* remove scrollbar space */
+		background: transparent;  /* optional: just make scrollbar invisible */
+	}
+	/* optional: show position indicator in red */
+	::-webkit-scrollbar-thumb {
+		background: #FF0000;
+	}
+
+</style>
+</head>
+    <body> 
+
+<div>
+                
+<iframe class="yt_players" id="player0" width="280" height="158" src="https://www.youtube.com/embed/VnSFCaThkHY?rel=0&wmode=Opaque&enablejsapi=1;loop=1&amp;autoplay=0&amp;showsearch=0&amp;version=3&amp;showinfo=0&amp;modestbranding=1&amp;fs=1;controls=0&amp;" frameborder="0" allowfullscreen></iframe>
+<iframe class="yt_players" id="player1" width="280" height="158" src="https://www.youtube.com/embed/nx8LYGtQdDs?rel=0&wmode=Opaque&enablejsapi=1;loop=1&amp;autoplay=0&amp;showsearch=0&amp;version=3&amp;showinfo=0&amp;modestbranding=1&amp;fs=1;controls=0&amp;" frameborder="0" allowfullscreen></iframe>
+</div>
+
+<div>
+<iframe class="yt_players" id="player2" width="280" height="158" src="https://www.youtube.com/embed/qdlQyNe_9tE?rel=0&wmode=Opaque&enablejsapi=1;loop=1&amp;autoplay=0&amp;showsearch=0&amp;version=3&amp;showinfo=0&amp;modestbranding=1&amp;fs=1;controls=0&amp;" frameborder="0" allowfullscreen></iframe>
+<iframe class="yt_players" id="player3" width="280" height="158" src="https://www.youtube.com/embed/fJ9rUzIMcZQ?rel=0&wmode=Opaque&enablejsapi=1;loop=1&amp;autoplay=0&amp;showsearch=0&amp;version=3&amp;showinfo=0&amp;modestbranding=1&amp;fs=1;controls=0&amp;" frameborder="0" allowfullscreen></iframe>
+</div>
+
+<div>
+<iframe class="yt_players" id="player4" width="280" height="158" src="https://www.youtube.com/embed/mo6LRLWUMwU?rel=0&wmode=Opaque&enablejsapi=1;loop=1&amp;autoplay=0&amp;showsearch=0&amp;version=3&amp;showinfo=0&amp;modestbranding=1&amp;fs=1;controls=0&amp;" frameborder="0" allowfullscreen></iframe>
+<iframe class="yt_players" id="player5" width="280" height="158" src="https://www.youtube.com/embed/JIHgfxVD13o?rel=0&wmode=Opaque&enablejsapi=1;loop=1&amp;autoplay=0&amp;showsearch=0&amp;version=3&amp;showinfo=0&amp;modestbranding=1&amp;fs=1;controls=0&amp;" frameborder="0" allowfullscreen></iframe>
+</div>
+
+<div>
+<iframe class="yt_players" id="player6" width="280" height="158" src="https://www.youtube.com/embed/7exajMfNiFQ?rel=0&wmode=Opaque&enablejsapi=1;loop=1&amp;autoplay=0&amp;showsearch=0&amp;version=3&amp;showinfo=0&amp;modestbranding=1&amp;fs=1;controls=0&amp;" frameborder="0" allowfullscreen></iframe>
+<iframe class="yt_players" id="player7" width="280" height="158" src="https://www.youtube.com/embed/67PMG2nVs4k?rel=0&wmode=Opaque&enablejsapi=1;loop=1&amp;autoplay=0&amp;showsearch=0&amp;version=3&amp;showinfo=0&amp;modestbranding=1&amp;fs=1;controls=0&amp;" frameborder="0" allowfullscreen></iframe>
+</div>
+
+
+</body>
+</html>
+  <script>
+  // tell the embed parent frame the height of the content
+  if (window.parent && window.parent.parent){
+    window.parent.parent.postMessage(["resultsFrame", {
+      height: document.body.getBoundingClientRect().height,
+      slug: "Y8P7y"
+    }], "*")
+  }
+</script>
