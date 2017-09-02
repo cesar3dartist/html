@@ -10,6 +10,7 @@
 			max-width: 100%;
 			background-color:transparent;
 			white-space: nowrap;
+			overflow-x: hidden;
 		}
 	
 	body
