@@ -101,7 +101,22 @@
   			display: inline-block;
   			
 		}
-
+	div.image
+		{
+			width:329px;
+			height:177px;
+			margin-bottom: 0px;
+			margin-left:14px;
+			margin-right:8px;
+			margin-top:8px;
+			resize: none;
+			float: left;
+			background-repeat:no-repeat;
+		}
+	 div.text
+	 	{
+			clear:both;	
+	 	}
 /*	::-webkit-scrollbar {
 		width: 0px; 
 		background: transparent; 
