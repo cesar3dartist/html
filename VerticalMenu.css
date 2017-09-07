@@ -75,4 +75,19 @@
 			height: 272px;
 			background: #242122;
 			vertical-align: top;
-		}  
+		} 
+
+	div.cool
+		{
+			/*background-image: url("https://img.youtube.com/vi/nx8LYGtQdDs/hqdefault.jpg");*/
+			height:300px;
+			width:400px;
+			margin-bottom: 0px;
+			resize: none;
+			float: left; margin: 0px 0px 0px 0px;
+			margin-left:8px;
+			margin-top:8px;
+			margin-right:8px;
+			background-repeat:no-repeat;
+			background-size: 400px 300px;
+		}
