@@ -73,7 +73,7 @@
 			border-width: 0px;
 			width: 357px;
 			height: 272px;
-			background: #242122;
+			background: red;
 			vertical-align: top;
 		} 
 
@@ -89,5 +89,6 @@
 			margin-top:8px;
 			margin-right:8px;
 			background-repeat:no-repeat;
+			background-size: 400px 300px;
 /*			background-size: 400px 100%;*/
 		}
