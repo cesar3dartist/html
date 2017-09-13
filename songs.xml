@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CATALOG>
+	<SONG>
+		<ID>https://soundcloud.com/vijayandsofia/vijay-sofia-notte-world-of-colors</ID>
+		<IMAGE>https://i1.sndcdn.com/artworks-000236638975-rvmb8u-t500x500.jpg</IMAGE>
+		<TITLE>World Of Colors</TITLE>
+		<ARTIST>Vijay And Sofia</ARTIST>
+	</SONG>
+	<SONG>
+		<ID>https://soundcloud.com/vijayandsofia/autograf-metaphysical-vijay-sofia-remix</ID>
+		<IMAGE>https://i1.sndcdn.com/artworks-000138944862-5zxsv1-t500x500.jpg</IMAGE>
+		<TITLE>Metaphysical</tTITLE>
+		<ARTIST>Vijay and Sofia</ARTIST>
+	</SONG>
+	<SONG>
+		<ID>https://soundcloud.com/armenmiran/armen-miran-precious-story-105-mix</ID>
+		<IMAGE>https://i1.sndcdn.com/artworks-000163732282-6o0qx3-t500x500.jpg</IMAGE>
+		<TITLE>Precious Story</TITLE>
+		<ARTIST>Armen Miran</ARTIST>
+	</SONG>
+</CATALOG>
