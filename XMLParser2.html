@@ -28,14 +28,17 @@ function myFunction(xml) {
   var xmlDoc = xml.responseXML;
   var table="<tr><th>Artist</th><th>Title</th></tr>";
   var x = xmlDoc.getElementsByTagName("SONG");
-  for (i = 0; i <x.length; i++) { 
-    table += '<tr><td onClick="setValue('+ID+"')"+'">'+
-		'<div class="scpic" style='+'"background-image:url('+x[i].getElementsByTagName("IMAGE")[0].childNodes[0].nodeValue+"'"+");"+'"'+"></div>"+
-		'<h1 class="songTitle">'+x[i].getElementsByTagName("TITLE")[0].childNodes[0].nodeValue+"</h1>"+
-		'<h2 class="artistName">'+x[i].getElementsByTagName("ARTIST")[0].childNodes[0].nodeValue+
-    "</td></tr>";
-  }
-  document.getElementById("demo").innerHTML = table;
+  for (i = 0; i <x.length; i++)
+	  { 
+		table += '<tr><td onClick="setValue('+ID+"')"+'">'+"</td></tr>";
+		  
+/*			'<div class="scpic" style='+'"background-image:url('+x[i].getElementsByTagName("IMAGE")[0].childNodes[0].nodeValue+"'"+");"+'"'+"></div>"+
+			'<h1 class="songTitle">'+x[i].getElementsByTagName("TITLE")[0].childNodes[0].nodeValue+"</h1>"+
+			'<h2 class="artistName">'+x[i].getElementsByTagName("ARTIST")[0].childNodes[0].nodeValue+
+		"</td></tr>";*/
+		  
+	  }
+  	document.getElementById("demo").innerHTML = table;
 }
 </script>
 
