@@ -10,9 +10,8 @@
  	<link rel="stylesheet" href="VerticalMenu.css?v=3">
 </head>
 <body>
+<button type="button" onclick="loadXMLDoc()">Get my CD collection</button>
 <table  border="0" id="demo"></table>
-
-
 <script>
 function loadXMLDoc() {
   var xmlhttp = new XMLHttpRequest();
@@ -27,11 +26,9 @@ function loadXMLDoc() {
 function myFunction(xml) {
   var i;
   var xmlDoc = xml.responseXML;
-	
-  var table="";
+  var table="<tr><th>Artist</th><th>Title</th></tr>";
   var x = xmlDoc.getElementsByTagName("SONG");
   for (i = 0; i <x.length; i++) { 
-	  
     table += '<tr><td onClick="setValue('+ID+"')"+'">'+
 		'<div class="scpic" style='+'"background-image:url('+x[i].getElementsByTagName("IMAGE")[0].childNodes[0].nodeValue+"'"+");"+'"'+"></div>"+
 		'<h1 class="songTitle">'+x[i].getElementsByTagName("TITLE")[0].childNodes[0].nodeValue+"</h1>"+
