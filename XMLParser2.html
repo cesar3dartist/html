@@ -34,14 +34,14 @@ function myFunction(xml) {
 		table += '<td onClick="setValue('+x[i].getElementsByTagName("ID")[0].childNodes[0].nodeValue+"')"+'">';
 		table += '<div class="scpic" style= '+'"background-image:url('+"'"+x[i].getElementsByTagName("IMAGE")[0].childNodes[0].nodeValue+"');"+'"></div>';
 		table += '<h1 class="songTitle">'+x[i].getElementsByTagName("TITLE")[0].childNodes[0].nodeValue+"</h1>";
-		table += '<h2 class="artistName">'+x[i].getElementsByTagName("TITLE")[0].childNodes[0].nodeValue+"</h2>";
+		table += '<h2 class="artistName">'+x[i].getElementsByTagName("ARTIST")[0].childNodes[0].nodeValue+"</h2>";
 		table += "</td>";
 
 		i++;
 		table += '<td onClick="setValue('+x[i].getElementsByTagName("ID")[0].childNodes[0].nodeValue+"')"+'">';
 		table += '<div class="scpic" style= '+'"background-image:url('+"'"+x[i].getElementsByTagName("IMAGE")[0].childNodes[0].nodeValue+"');"+'"></div>';
 		table += '<h1 class="songTitle">'+x[i].getElementsByTagName("TITLE")[0].childNodes[0].nodeValue+"</h1>";
-		table += '<h2 class="artistName">'+x[i].getElementsByTagName("TITLE")[0].childNodes[0].nodeValue+"</h2>";
+		table += '<h2 class="artistName">'+x[i].getElementsByTagName("ARTIST")[0].childNodes[0].nodeValue+"</h2>";
 		table += "</td>";
 		table += "</tr>";
 	  }
