@@ -4,7 +4,8 @@
 <script>
 
   /***** START BOILERPLATE CODE: Load client library, authorize user. *****/
-
+	//https://developers.google.com/youtube/v3/docs/search
+	
   // Global variables for GoogleAuth object, auth status.
   var GoogleAuth;
 
@@ -101,7 +102,9 @@
 
   function executeRequest(request) {
     request.execute(function(response) {
+	//prints to console
       console.log(response);
+		document.write(response);
     });
   }
 
