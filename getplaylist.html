@@ -102,6 +102,7 @@
 
   function executeRequest(request) {
     request.execute(function(response) {
+	//print to console the result
       console.log(response);
     });
   }
@@ -136,7 +137,7 @@
 
 buildApiRequest('GET',
                 '/youtube/v3/playlists',
-                {'channelId': 'UC_x5XG1OV2P6uZZ5FSM9Ttw',
+                {'channelId': 'PLw6eTMMKY24QLYfmrU2rB8x-lP5Fas2dY',
                  'maxResults': '25',
                  'part': 'snippet,contentDetails'});
 
