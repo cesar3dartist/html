@@ -105,7 +105,9 @@
 	//prints to console
       console.log(response);
 		//prints the object as it is to the html.
-		document.write(JSON.stringify(response));
+		//document.write(JSON.stringify(response));
+		
+		document.write(JSON.parse(response));
     });
   }
 
