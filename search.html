@@ -103,7 +103,7 @@
 function executeRequest(request) {
     request.execute(function(response) {
 		console.log(response);
-		document.write("Hello World");
+		//document.write("Hello World");
 		var json = JSON.parse(response);
 		document.write(json.kind);
 		
