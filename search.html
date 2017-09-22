@@ -108,7 +108,14 @@
 		//JSON.stringify converts a javascript object into a string.
 		//document.write(JSON.stringify(response));
 		var objString= JSON.stringify(response);
-		if (typeof json != 'string'){document.write("not a string");}
+		if (typeof json != 'string')<br>
+			{
+				document.write("not a string");
+			}
+		if (typeof response =='object')<br>
+			{
+				document.write("This is an object");
+			}
 		
     });
   }
