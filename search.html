@@ -105,9 +105,11 @@
 	//prints to console
       console.log(response);
 		//prints the object as it is to the html.
+		//JSON.stringify converts a javascript object into a string.
 		//document.write(JSON.stringify(response));
+		var objString= JSON.stringify(response, null, 2);
 		
-		document.write(JSON.parse(response));
+		
     });
   }
 
@@ -147,6 +149,28 @@ buildApiRequest('GET',
                  'type': ''});
 
   }
+	
+	function syntaxHighlight(json) {
+    if (typeof json != 'string') {
+         json = JSON.stringify(json, undefined, 2);
+    }
+    json = json.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
+    return json.replace(/("(\\u[a-zA-Z0-9]{4}|\\[^u]|[^\\"])*"(\s*:)?|\b(true|false|null)\b|-?\d+(?:\.\d*)?(?:[eE][+\-]?\d+)?)/g, function (match) {
+        var cls = 'number';
+        if (/^"/.test(match)) {
+            if (/:$/.test(match)) {
+                cls = 'key';
+            } else {
+                cls = 'string';
+            }
+        } else if (/true|false/.test(match)) {
+            cls = 'boolean';
+        } else if (/null/.test(match)) {
+            cls = 'null';
+        }
+        return '<span class="' + cls + '">' + match + '</span>';
+    });
+}
 </script>
 
 <button id="execute-request-button">Authorize</button>
