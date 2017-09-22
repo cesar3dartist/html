@@ -104,8 +104,8 @@ function executeRequest(request) {
     request.execute(function(response) {
 		console.log(response);
 		//document.write("Hello World");
-		var json = JSON.parse(response);
-		document.write(json.kind);
+		// does not work //var json = JSON.parse(response);
+		document.write(response.kind);
 		
     });
   }						
