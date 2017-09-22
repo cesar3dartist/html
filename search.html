@@ -114,7 +114,9 @@
 			}
 		if (typeof response =='object')<br>
 			{
-				document.write("This is an object");
+				alert("This is an object");
+				var json = JSON.parse(response);
+				alert(json[name]);
 			}
 		
     });
