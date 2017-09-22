@@ -100,28 +100,14 @@
     return params;
   }
 
-  function executeRequest(request) {
+function executeRequest(request) {
     request.execute(function(response) {
-	//prints to console
-      console.log(response);
-		//prints the object as it is to the html.
-		//JSON.stringify converts a javascript object into a string.
-		//document.write(JSON.stringify(response));
-		var objString= JSON.stringify(response);
-		if (typeof json != 'string')<br>
-			{
-				document.write("not a string");
-			}
-		//if (typeof response =='object')<br>
-			//{
-				//alert("This is an object");
-				//var json = JSON.parse(response);
-				//alert(json[name]);
-			//}
-		
+		console.log(response);
+		document.write("not a string");
     });
-  }
-
+  }						
+						
+						
   function buildApiRequest(requestMethod, path, params, properties) {
     params = removeEmptyParams(params);
     var request;
