@@ -106,8 +106,8 @@ function executeRequest(request) {
 		//this works!!!
 		console.log(response);
 		//document.write(response.kind);
-		
-		document.write(response.etag);
+		//document.write(response.etag);
+		document.write(response[0].[1].videoId);
 		
     });
   }						
