@@ -120,7 +120,7 @@ function executeRequest(request) {
 		
 		
 		info += "<tr>";
-		info += '<td onClick="setValue('response.items[0].id.videoId+"')"+'">';
+		info += '<td onClick="setValue('+response.items[0].id.videoId+"')"+'">';
 		info += '<div class="scpic" style= '+'"background-image:url('+"'"+response.items[0].snippet.thumbnails.default.url+"');"+'"></div>';
 		info += '<h1 class="songTitle">'+response.items[0].snippet.description+"</h1>";
 		//table += '<h2 class="artistName">'+x[i].getElementsByTagName("ARTIST")[0].childNodes[0].nodeValue+"</h2>";
