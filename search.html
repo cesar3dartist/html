@@ -107,7 +107,7 @@ function executeRequest(request) {
 		console.log(response);
 		//document.write(response.kind);
 		//document.write(response.etag);
-		document.write(response[0].[1].videoId);
+		document.write(response.items[0].id.videoId);
 		
     });
   }						
