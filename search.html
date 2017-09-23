@@ -112,8 +112,8 @@ function executeRequest(request) {
 		//document.write(response.items[0].snippet.description);
 		//document.write(response.items[0].snippet.thumbnails.default.url);
 		var info="";
-		info = 	response.items[0].id.videoId +
-				response.items[0].snippet.description +
+		info = 	response.items[0].id.videoId + "<br>" +
+				response.items[0].snippet.description + "<br>"
 				response.items[0].snippet.thumbnails.default.url;
 
 		document.getElementById("demo").innerHTML = info;
