@@ -104,10 +104,10 @@ function executeRequest(request) {
     request.execute(function(response) {
 		
 		//this works!!!
-		//console.log(response);
+		console.log(response);
 		//document.write(response.kind);
 		
-		document.write(response.videos[1].id);
+		document.write(response.etag);
 		
     });
   }						
