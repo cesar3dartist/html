@@ -1,6 +1,6 @@
 <html><head><title>Google APIs - Sample JS Page</title></head>
 <body>
-
+<table  border="0" id="demo"></table>
 <script>
 
   /***** START BOILERPLATE CODE: Load client library, authorize user. *****/
@@ -107,8 +107,16 @@ function executeRequest(request) {
 		console.log(response);
 		//document.write(response.kind);
 		//document.write(response.etag);
-		document.write(response.items[0].id.videoId);
-		
+		//document.write(response.items[0].snippet.channelTitle);
+		//document.write(response.items[0].id.videoId);
+		//document.write(response.items[0].snippet.description);
+		//document.write(response.items[0].snippet.thumbnails.default.url);
+		var info="";
+		info = 	response.items[0].id.videoId +
+				response.items[0].snippet.description +
+				response.items[0].snippet.thumbnails.default.url;
+
+		document.getElementById("demo").innerHTML = info;
     });
   }						
 						
