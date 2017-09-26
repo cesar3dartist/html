@@ -119,14 +119,14 @@ function executeRequest(request) {
 		//		response.items[0].snippet.thumbnails.default.url;
 
 		
-		
+		//.items["0"].id.videoId
 		info += "<tr>";
-		info += '<td onClick="setValue('+response.items[0].id.videoId+"')"+'">';
+		info += '<td onClick="setValue('+ response.items[0].id.videoId+"')"+'">';
 		info += '<div class="scpic" style= '+'"background-image:url('+"'"+response.items[0].snippet.thumbnails.high.url+"');"+'"></div>';
 		info += '<h1 class="songTitle">'+response.items[0].snippet.title+"</h1>";
 		info += '<h2 class="artistName">'+response.items[0].snippet.channelTitle+"</h2>";
 		info += "</td>";
-		
+		alert (response.items[0].id.videoId);
 		
 		
 		
