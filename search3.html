@@ -106,10 +106,10 @@
     request.execute(function(response) {
       console.log(response);
       var info="";
-              info += "<tr>";
-        //info += '<td onClick="setValue('+ response.items[0].id.videoId+"')"+'">';
-        //info += '<td onClick="parent.location.hash='+response.items[0].id.videoId+'>';
-      info += '<td onClick="parent.location.hash=test>';
+      var test="testValue";
+
+      info += "<tr>";
+      info += '<td onClick="setValue(test)">';
       //info += "<td>";
       info += '<div class="scpic" style= '+'"background-image:url('+"'"+response.items[0].snippet.thumbnails.high.url+"');"+'"></div>';
       info += '<h1 class="songTitle">'+response.items[0].snippet.title+"</h1>";
