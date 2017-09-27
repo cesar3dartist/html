@@ -106,10 +106,11 @@
     request.execute(function(response) {
       console.log(response);
       var info="";
-      var test="'asdseadsad'";
-
+      //var test="'asdseadsad'";
+      var test="asdseadsad";
       info += "<tr>";
-      info += '<td onClick="setValue('+test+')">';
+      //info += '<td onClick="setValue('+test+')">';
+      info += '<td onClick="setValue('+ String(test) +')">';
       //info += "<td>";
       info += '<div class="scpic" style= '+'"background-image:url('+"'"+response.items[0].snippet.thumbnails.high.url+"');"+'"></div>';
       info += '<h1 class="songTitle">'+response.items[0].snippet.title+"</h1>";
