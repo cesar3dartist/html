@@ -122,8 +122,30 @@
 
 function buildMenu(response)
   {
-    var size= response.items.length
+    var info="";
+    var size= response.items.length -1;
     alert(size);
+
+      for (i = 0; i <size; i++)
+        {
+
+          info += "<tr>";
+          info += '<td onClick='+'"'+"setValue('"+ response.items[i].id.videoId +"'"+')">';
+          info += '<div class="scpic" style= '+'"background-image:url('+"'"+response.items[i].snippet.thumbnails.high.url+"');"+'"></div>';
+          info += '<h1 class="songTitle">'+response.items[i].snippet.title+"</h1>";
+          info += '<h2 class="artistName">'+response.items[i].snippet.channelTitle+"</h2>";
+          info += "</td>";
+          i++;
+          info += '<td onClick='+'"'+"setValue('"+ response.items[i].id.videoId +"'"+')">';
+          info += '<div class="scpic" style= '+'"background-image:url('+"'"+response.items[i].snippet.thumbnails.high.url+"');"+'"></div>';
+          info += '<h1 class="songTitle">'+response.items[i].snippet.title+"</h1>";
+          info += '<h2 class="artistName">'+response.items[i].snippet.channelTitle+"</h2>";
+          info += "</td>";
+          info += "</tr>";
+
+        }
+
+        document.getElementById("demo").innerHTML = info;
   }
 
   function buildApiRequest(requestMethod, path, params, properties) {
