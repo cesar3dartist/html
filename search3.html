@@ -106,11 +106,8 @@
     request.execute(function(response) {
       console.log(response);
       var info="";
-      //var test="'asdseadsad'";
-      var test="asdseadsad";
+
       info += "<tr>";
-      //info += '<td onClick="setValue('+test+')">';
-      //.items["0"].id.videoId
       info += '<td onClick='+'"'+"setValue('"+ response.items[0].id.videoId +"'"+')">';
       //info += '<td onClick='+'"'+"setValue('"+ String(test) +"'"+')">';
       //info += "<td>";
@@ -125,9 +122,10 @@
 
 function buildMenu(response)
   {
-    alert(response.items[0].id.videoId);
+    var size= response.items.shareInfo.length;
+    alert(size);
   }
-  
+
   function buildApiRequest(requestMethod, path, params, properties) {
     params = removeEmptyParams(params);
     var request;
