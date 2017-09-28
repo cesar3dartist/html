@@ -105,17 +105,6 @@
   function executeRequest(request) {
     request.execute(function(response) {
       console.log(response);
-      var info="";
-
-      info += "<tr>";
-      info += '<td onClick='+'"'+"setValue('"+ response.items[0].id.videoId +"'"+')">';
-      //info += '<td onClick='+'"'+"setValue('"+ String(test) +"'"+')">';
-      //info += "<td>";
-      info += '<div class="scpic" style= '+'"background-image:url('+"'"+response.items[0].snippet.thumbnails.high.url+"');"+'"></div>';
-      info += '<h1 class="songTitle">'+response.items[0].snippet.title+"</h1>";
-      info += '<h2 class="artistName">'+response.items[0].snippet.channelTitle+"</h2>";
-      info += "</td>";
-      document.getElementById("demo").innerHTML = info;
       buildMenu(response);
     });
   }
@@ -176,6 +165,7 @@ function buildMenu(response)
     // See full sample for buildApiRequest() code, which is not 
 // specific to a particular youtube or youtube method.
 
+/*
 buildApiRequest('GET',
                 '/youtube/v3/search',
                 {'maxResults': '25',
@@ -184,6 +174,16 @@ buildApiRequest('GET',
                  'type': ''});
 
   }
+*/
+
+
+buildApiRequest('GET',
+                '/youtube/v3/videos',
+                {'id': 'Ks-_Mh1QhMc,c0KYU2j0TM4,eIho2S0ZahI',
+                 'part': 'snippet,contentDetails,statistics'});
+
+  }
+
 </script>
 
 <button id="execute-request-button">Authorize</button>
