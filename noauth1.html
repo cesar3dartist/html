@@ -9,7 +9,7 @@
 	//request: 'https://www.googleapis.com/youtube/v3/playlistItems?part=snippet&playlistId=PLjFEz-E0UPUxw3lFpnfV1dDA7OE7YIFRj&key={AIzaSyBB-VOJNDXCsC5DwB-orEDZI5n_Dg2qJwM}'
 function buildHTML()
 	{
-		let url = 'https://www.googleapis.com/youtube/v3/playlistItems?part=snippet&playlistId=PLjFEz-E0UPUxw3lFpnfV1dDA7OE7YIFRj&key={AIzaSyBB-VOJNDXCsC5DwB-orEDZI5n_Dg2qJwM}';
+		let url = "https://www.googleapis.com/youtube/v3/channels?part=contentDetails&mine=true";
 
 		fetch(url)
 		.then(res => res.json())
