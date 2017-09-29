@@ -117,7 +117,7 @@ function buildMenu(response)
 
       for (i = 0; i <response.items.length; i++)
         {
-.items["0"].contentDetails.videoId
+
           info += "<tr>";
           info += '<td onClick='+'"'+"setValue('"+ response..items[i].contentDetails.videoId +"'"+')">';
           info += '<div class="scpic" style= '+'"background-image:url('+"'"+response.items[i].snippet.thumbnails.high.url+"');"+'"></div>';
