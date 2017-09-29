@@ -117,9 +117,9 @@ function buildMenu(response)
 
       for (i = 0; i <response.items.length; i++)
         {
-
+.items["0"].contentDetails.videoId
           info += "<tr>";
-          info += '<td onClick='+'"'+"setValue('"+ response.items[i].id +"'"+')">';
+          info += '<td onClick='+'"'+"setValue('"+ response..items[i].contentDetails.videoId +"'"+')">';
           info += '<div class="scpic" style= '+'"background-image:url('+"'"+response.items[i].snippet.thumbnails.high.url+"');"+'"></div>';
           info += '<h1 class="songTitle">'+response.items[i].snippet.title+"</h1>";
           info += '<h2 class="artistName">'+response.items[i].snippet.channelTitle+"</h2>";
@@ -128,7 +128,7 @@ function buildMenu(response)
 
           if (i<response.items.length)
             {
-              info += '<td onClick='+'"'+"setValue('"+ response.items[i].id +"'"+')">';
+              info += '<td onClick='+'"'+"setValue('"+ response..items[i].contentDetails.videoId +"'"+')">';
               info += '<div class="scpic" style= '+'"background-image:url('+"'"+response.items[i].snippet.thumbnails.high.url+"');"+'"></div>';
               info += '<h1 class="songTitle">'+response.items[i].snippet.title+"</h1>";
               info += '<h2 class="artistName">'+response.items[i].snippet.channelTitle+"</h2>";
@@ -166,30 +166,15 @@ function buildMenu(response)
 
   
   function defineRequest() {
-    // See full sample for buildApiRequest() code, which is not 
-// specific to a particular youtube or youtube method.
 
-/*
-buildApiRequest('GET',
-                '/youtube/v3/search',
-                {'maxResults': '25',
-                 'part': 'snippet',
-                 'q': 'surfing',
-                 'type': ''});
+  buildApiRequest('GET',
+                  '/youtube/v3/playlistItems',
+                  {'maxResults': '25',
+                   'part': 'snippet,contentDetails',
+                   'playlistId': 'PLZcw3QBoEHOEiqwbrigRMS0LHEOyPvLs7'});
 
   }
-*/
 
-//PLZcw3QBoEHOEiqwbrigRMS0LHEOyPvLs7
-//Ks-_Mh1QhMc,c0KYU2j0TM4,eIho2S0ZahI
-buildApiRequest('GET',
-                '/youtube/v3/playlistItems',
-                {'maxResults': '25',
-                 'part': 'snippet,contentDetails',
-                 'playlistId': 'PLZcw3QBoEHOEiqwbrigRMS0LHEOyPvLs7'});
-
-  }
-  
 </script>
 
 <button id="execute-request-button">Authorize</button>
