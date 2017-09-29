@@ -1,0 +1,58 @@
+<html><head><title>Google APIs - Sample JS Page</title></head>
+<body onload="buildHTML()">
+<table  border="0" id="demo"></table>
+<script src="VerticalMusicMenu.js"> </script>
+<link rel="stylesheet" href="VerticalMenu.css?v=3">
+<script>
+	// THIS REQUEST WORKS
+	//let url = "https://www.googleapis.com/youtube/v3/activities?part=snippet%2CcontentDetails&channelId=UC_x5XG1OV2P6uZZ5FSM9Ttw&maxResults=25&key=AIzaSyBB-VOJNDXCsC5DwB-orEDZI5n_Dg2qJwM";
+	//API key: AIzaSyBB-VOJNDXCsC5DwB-orEDZI5n_Dg2qJwM
+	//request: https://www.googleapis.com/youtube/v3/activities?part=snippet%2CcontentDetails&channelId=UC_x5XG1OV2P6uZZ5FSM9Ttw&maxResults=25&key={AIzaSyBB-VOJNDXCsC5DwB-orEDZI5n_Dg2qJwM}
+
+	// WIP REQUESTS
+	//
+function buildHTML()
+	{
+		let url = "https://www.googleapis.com/youtube/v3/activities?part=snippet%2CcontentDetails&playlistlId=PLZcw3QBoEHOEiqwbrigRMS0LHEOyPvLs7&maxResults=25&key=AIzaSyBB-VOJNDXCsC5DwB-orEDZI5n_Dg2qJwM";
+
+		fetch(url)
+		.then(res => res.json())
+		.then((out) => {
+		  console.log('Checkout this JSON! ', out);
+		  buildMenu(out);
+		})
+		.catch(err => console.error(err));
+	}
+
+function buildMenu(response)
+  {
+    var info="";
+    var size= response.items.length -1;
+    //alert(size);
+
+      for (i = 0; i <response.items.length; i++)
+        {
+
+          info += "<tr>";
+          info += '<td onClick='+'"'+"setValue('"+ response.items[i].contentDetails.videoId +"'"+')">';
+          info += '<div class="scpic" style= '+'"background-image:url('+"'"+response.items[i].snippet.thumbnails.high.url+"');"+'"></div>';
+          info += '<h1 class="songTitle">'+response.items[i].snippet.title+"</h1>";
+          info += '<h2 class="artistName">'+response.items[i].snippet.channelTitle+"</h2>";
+          info += "</td>";
+          i++;
+
+          if (i<response.items.length)
+            {
+              info += '<td onClick='+'"'+"setValue('"+ response.items[i].contentDetails.videoId +"'"+')">';
+              info += '<div class="scpic" style= '+'"background-image:url('+"'"+response.items[i].snippet.thumbnails.high.url+"');"+'"></div>';
+              info += '<h1 class="songTitle">'+response.items[i].snippet.title+"</h1>";
+              info += '<h2 class="artistName">'+response.items[i].snippet.channelTitle+"</h2>";
+              info += "</td>";
+              info += "</tr>";
+            }
+
+        }
+
+        document.getElementById("demo").innerHTML = info;
+  }
+</script>
