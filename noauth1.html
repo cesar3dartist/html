@@ -6,7 +6,7 @@
 <script>
 	//let url = "https://www.googleapis.com/youtube/v3/activities?part=snippet%2CcontentDetails&channelId=UC_x5XG1OV2P6uZZ5FSM9Ttw&maxResults=25&key=AIzaSyBB-VOJNDXCsC5DwB-orEDZI5n_Dg2qJwM";
 	//API key: AIzaSyBB-VOJNDXCsC5DwB-orEDZI5n_Dg2qJwM
-	//
+	//request: https://www.googleapis.com/youtube/v3/activities?part=snippet%2CcontentDetails&channelId=UC_x5XG1OV2P6uZZ5FSM9Ttw&maxResults=25&key={AIzaSyBB-VOJNDXCsC5DwB-orEDZI5n_Dg2qJwM}
 
 function buildHTML()
 	{
@@ -16,7 +16,7 @@ function buildHTML()
 		.then(res => res.json())
 		.then((out) => {
 		  console.log('Checkout this JSON! ', out);
-		  buildMenu(response);
+		  buildMenu(out);
 		})
 		.catch(err => console.error(err));
 	}
