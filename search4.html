@@ -128,7 +128,7 @@ function buildMenu(response)
 
           if (i<response.items.length)
             {
-              info += '<td onClick='+'"'+"setValue('"+ response..items[i].contentDetails.videoId +"'"+')">';
+              info += '<td onClick='+'"'+"setValue('"+ response.items[i].contentDetails.videoId +"'"+')">';
               info += '<div class="scpic" style= '+'"background-image:url('+"'"+response.items[i].snippet.thumbnails.high.url+"');"+'"></div>';
               info += '<h1 class="songTitle">'+response.items[i].snippet.title+"</h1>";
               info += '<h2 class="artistName">'+response.items[i].snippet.channelTitle+"</h2>";
