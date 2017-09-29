@@ -6,10 +6,22 @@
 <script>
 	//No auth info: https://stackoverflow.com/questions/12460378/how-to-get-json-from-url-in-javascript
 	//API key: AIzaSyBB-VOJNDXCsC5DwB-orEDZI5n_Dg2qJwM
-	//request: 'https://www.googleapis.com/youtube/v3/playlistItems?part=snippet&playlistId=PLjFEz-E0UPUxw3lFpnfV1dDA7OE7YIFRj&key={AIzaSyBB-VOJNDXCsC5DwB-orEDZI5n_Dg2qJwM}'
-function buildHTML()
+	//request: https://www.googleapis.com/youtube/v3/activities?part=snippet%2CcontentDetails&channelId=UC_x5XG1OV2P6uZZ5FSM9Ttw&maxResults=25&key={AIzaSyBB-VOJNDXCsC5DwB-orEDZI5n_Dg2qJwM}
+function buildHTML2()
 	{
 		let url = "https://www.googleapis.com/youtube/v3/channels?part=contentDetails&mine=true";
+
+		fetch(url)
+		.then(res => res.json())
+		.then((out) => {
+		  console.log('Checkout this JSON! ', out);
+		})
+		.catch(err => console.error(err));
+	}
+
+function buildHTML()
+	{
+		let url = "https://www.googleapis.com/youtube/v3/activities?part=snippet%2CcontentDetails&channelId=UC_x5XG1OV2P6uZZ5FSM9Ttw&maxResults=25&key={AIzaSyBB-VOJNDXCsC5DwB-orEDZI5n_Dg2qJwM}";
 
 		fetch(url)
 		.then(res => res.json())
