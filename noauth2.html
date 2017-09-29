@@ -11,12 +11,13 @@
 
 	// WIP REQUESTS
 	//https://www.googleapis.com/youtube/v3/playlistItems?part=snippet&maxResults=50&playlistId=PLB03EA9545DD188C3&key=MY_API_KEY
+	//https://www.googleapis.com/youtube/v3/playlistItems?part=snippet&maxResults=50&playlistId=PLB03EA9545DD188C3&key==AIzaSyBB-VOJNDXCsC5DwB-orEDZI5n_Dg2qJwM"
 
 
 
 function buildHTML()
 	{
-		let url = "https://www.googleapis.com/youtube/v3/playlistItems?part=snippet&maxResults=50&playlistId=PLB03EA9545DD188C3&key==AIzaSyBB-VOJNDXCsC5DwB-orEDZI5n_Dg2qJwM";
+		let url = "https://www.googleapis.com/youtube/v3/activities?part=snippet%2CcontentDetails&channelId=UC_x5XG1OV2P6uZZ5FSM9Ttw&maxResults=25&key=AIzaSyBB-VOJNDXCsC5DwB-orEDZI5n_Dg2qJwM";
 
 		fetch(url)
 		.then(res => res.json())
