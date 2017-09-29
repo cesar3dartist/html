@@ -6,30 +6,26 @@
 <script>
 	//No auth info: https://stackoverflow.com/questions/12460378/how-to-get-json-from-url-in-javascript
 	//API key: AIzaSyBB-VOJNDXCsC5DwB-orEDZI5n_Dg2qJwM
-	var getJSON = function(url, callback) {
-    var xhr = new XMLHttpRequest();
-    xhr.open('GET', url, true);
-    xhr.responseType = 'json';
-    xhr.onload = function() {
-      var status = xhr.status;
-      if (status === 200) {
-        callback(null, xhr.response);
-      } else {
-        callback(status, xhr.response);
-      }
-    };
-    xhr.send();
-};
-
 function buildHTML()
 	{
-		getJSON('https://www.googleapis.com/youtube/v3/playlistItems?part=snippet&playlistId=PLjFEz-E0UPUxw3lFpnfV1dDA7OE7YIFRj&key={AIzaSyBB-VOJNDXCsC5DwB-orEDZI5n_Dg2qJwM}',
-		function(err, data) {
-		  if (err !== null) {
-		    alert('Something went wrong: ' + err);
-		  } else {
-		    alert('Your query count: ' + data.query.count);
-		  }
-		});
+    		var xhr = new XMLHttpRequest();
+    		xhr.open('GET', 'https://www.googleapis.com/youtube/v3/playlistItems?part=snippet&playlistId=PLjFEz-E0UPUxw3lFpnfV1dDA7OE7YIFRj&key={AIzaSyBB-VOJNDXCsC5DwB-orEDZI5n_Dg2qJwM}', true);
+    		xhr.responseType = 'json';
+    		xhr.onload = function()
+    			{
+      				var status = xhr.status;
+      				if (status === 200)
+      					{
+        					callback(null, xhr.response);
+      					}
+      				else
+      					{
+        					callback(status, xhr.response);
+      					}
+    			};
+    		xhr.send();
+		
 	}
+
+
 </script>
