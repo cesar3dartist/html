@@ -13,34 +13,6 @@
 	//
 
 
-function buildApiRequest(requestMethod, path, params, properties) {
-    params = removeEmptyParams(params);
-    var request;
-    if (properties) {
-      var resource = createResource(properties);
-      request = gapi.client.request({
-          'body': resource,
-          'method': requestMethod,
-          'path': path,
-          'params': params
-      });
-    } else {
-      request = gapi.client.request({
-          'method': requestMethod,
-          'path': path,
-          'params': params
-      });
-    }
-    executeRequest(request);
-  }
-
-//called by buildApiRequest
-function executeRequest(request) {
-    request.execute(function(response) {
-      console.log(response);
-      buildMenu(response);
-    });
-  }
 
 function buildHTML()
 	{
@@ -55,16 +27,7 @@ function buildHTML()
 		.catch(err => console.error(err));
 	}
 
-function defineRequest() {
-	buildApiRequest('GET',
-	                  '/youtube/v3/playlistItems',
-	                  {'maxResults': '25',
-	                   'part': 'snippet,contentDetails',
-	                   'playlistId': 'PLZcw3QBoEHOEiqwbrigRMS0LHEOyPvLs7'});
 
-	  }
-
-}
 function buildMenu(response)
   {
     var info="";
