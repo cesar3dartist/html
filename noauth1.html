@@ -4,20 +4,9 @@
 <script src="VerticalMusicMenu.js"> </script>
 <link rel="stylesheet" href="VerticalMenu.css?v=3">
 <script>
-	//No auth info: https://stackoverflow.com/questions/12460378/how-to-get-json-from-url-in-javascript
+	//let url = "https://www.googleapis.com/youtube/v3/activities?part=snippet%2CcontentDetails&channelId=UC_x5XG1OV2P6uZZ5FSM9Ttw&maxResults=25&key=AIzaSyBB-VOJNDXCsC5DwB-orEDZI5n_Dg2qJwM";
 	//API key: AIzaSyBB-VOJNDXCsC5DwB-orEDZI5n_Dg2qJwM
-	//request: https://www.googleapis.com/youtube/v3/activities?part=snippet%2CcontentDetails&channelId=UC_x5XG1OV2P6uZZ5FSM9Ttw&maxResults=25&key={AIzaSyBB-VOJNDXCsC5DwB-orEDZI5n_Dg2qJwM}
-function buildHTML2()
-	{
-		let url = "https://www.googleapis.com/youtube/v3/channels?part=contentDetails&mine=true";
-
-		fetch(url)
-		.then(res => res.json())
-		.then((out) => {
-		  console.log('Checkout this JSON! ', out);
-		})
-		.catch(err => console.error(err));
-	}
+	//
 
 function buildHTML()
 	{
@@ -27,9 +16,40 @@ function buildHTML()
 		.then(res => res.json())
 		.then((out) => {
 		  console.log('Checkout this JSON! ', out);
+		  buildMenu(response);
 		})
 		.catch(err => console.error(err));
 	}
 
+function buildMenu(response)
+  {
+    var info="";
+    var size= response.items.length -1;
+    //alert(size);
 
+      for (i = 0; i <response.items.length; i++)
+        {
+
+          info += "<tr>";
+          info += '<td onClick='+'"'+"setValue('"+ response.items[i].contentDetails.videoId +"'"+')">';
+          info += '<div class="scpic" style= '+'"background-image:url('+"'"+response.items[i].snippet.thumbnails.high.url+"');"+'"></div>';
+          info += '<h1 class="songTitle">'+response.items[i].snippet.title+"</h1>";
+          info += '<h2 class="artistName">'+response.items[i].snippet.channelTitle+"</h2>";
+          info += "</td>";
+          i++;
+
+          if (i<response.items.length)
+            {
+              info += '<td onClick='+'"'+"setValue('"+ response.items[i].contentDetails.videoId +"'"+')">';
+              info += '<div class="scpic" style= '+'"background-image:url('+"'"+response.items[i].snippet.thumbnails.high.url+"');"+'"></div>';
+              info += '<h1 class="songTitle">'+response.items[i].snippet.title+"</h1>";
+              info += '<h2 class="artistName">'+response.items[i].snippet.channelTitle+"</h2>";
+              info += "</td>";
+              info += "</tr>";
+            }
+
+        }
+
+        document.getElementById("demo").innerHTML = info;
+  }
 </script>
