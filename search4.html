@@ -183,11 +183,10 @@ buildApiRequest('GET',
 //PLZcw3QBoEHOEiqwbrigRMS0LHEOyPvLs7
 //Ks-_Mh1QhMc,c0KYU2j0TM4,eIho2S0ZahI
 buildApiRequest('GET',
-                '/youtube/v3/videos',
-                {'id': 'PLZcw3QBoEHOFhpASFpeLWIUeTRD4rI179',
-                 'part': 'snippet,contentDetails,statistics'});
-
-  }
+                '/youtube/v3/playlistItems',
+                {'maxResults': '25',
+                 'part': 'snippet,contentDetails',
+                 'playlistId': 'PLZcw3QBoEHOEiqwbrigRMS0LHEOyPvLs7'});
 
 </script>
 
