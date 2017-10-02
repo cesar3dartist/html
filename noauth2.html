@@ -15,10 +15,27 @@
 
 	//SUCCESSFUL CUSTOM PLAYLIST
 	// let url = "https://www.googleapis.com/youtube/v3/playlistItems?part=snippet%2CcontentDetails&playlistId=PLZcw3QBoEHOEiqwbrigRMS0LHEOyPvLs7&maxResults=25&key=AIzaSyBB-VOJNDXCsC5DwB-orEDZI5n_Dg2qJwM";
+	//Playlist for Youtube Business: PLrzEbJ2_il5yrNfcsvtgMTkGIKXOsGD_Y
+	//This is the one that works:
+	//"https://www.googleapis.com/youtube/v3/playlistItems?part=snippet%2CcontentDetails&playlistId=PLZcw3QBoEHOGdJ7iZAEYWxpx2dDPccxLo&maxResults=25&key=AIzaSyBB-VOJNDXCsC5DwB-orEDZI5n_Dg2qJwM"
 
+function buildURL()
+	{
+		var url="";
+		var api= "https://www.googleapis.com/youtube/v3/";
+		var parameters= "playlistItems?part=snippet%2CcontentDetails";
+		var playlist = "PLZcw3QBoEHOGdJ7iZAEYWxpx2dDPccxLo";
+		var maxResults= "25";
+		var apikey="AIzaSyBB-VOJNDXCsC5DwB-orEDZI5n_Dg2qJwM";
+
+		url = api+parameters+"&playlistId="+playlist+"&maxResults="+maxResults+"&key="+apikey;
+		return(url);
+	}
+
+//invoked when the page is loaded
 function buildHTML()
 	{
-		let url = "https://www.googleapis.com/youtube/v3/playlistItems?part=snippet%2CcontentDetails&playlistId=PLZcw3QBoEHOGdJ7iZAEYWxpx2dDPccxLo&maxResults=25&key=AIzaSyBB-VOJNDXCsC5DwB-orEDZI5n_Dg2qJwM";
+		let url = buildURL();
 
 		fetch(url)
 		.then(res => res.json())
@@ -29,7 +46,7 @@ function buildHTML()
 		.catch(err => console.error(err));
 	}
 
-
+//invoked by buildHTML()
 function buildMenu(response)
   {
     var info="";
