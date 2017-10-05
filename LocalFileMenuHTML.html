@@ -12,14 +12,19 @@
 				var html="<br>";
 				for (i=0; i< array.length; ++i)
 					{	
-						html+= '<button class="button">';
+						html+= '<button class="button" ';
+						html+='onclick="addHash()">'
 						html+= array[i];
 						html+= "</button>";
 						html+= "<br>";
 					}
 				document.getElementById("songs").innerHTML = html;
 			}
-
+		function addHash()
+			{
+				document.getElementById("songs").innerHTML = "SURPRISE";	
+			}
+			
 	</script>
 	<table  class="songs" border="0" id="songs"></table>
 	<body>
