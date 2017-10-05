@@ -1,0 +1,9 @@
+@charset "utf-8";
+
+	table.songs
+		{
+			font-family: Gotham, Arial,sans-serif;
+			font-weight: normal;
+			color: black;
+			font-size: 40px;
+		}

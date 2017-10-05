@@ -1,8 +1,16 @@
-<script>		
-	function helloWorld(param)
-		{
-			
-			document.write(param);
-		}
+<html>
+	<body>
+	<link rel="stylesheet" href="LocalFileMenuHTML.css?">
+	<script>
+		//Called from within UE4 Blueprint
+		function buildHTML(songs)
+			{
 
-</script>
+				document.write(param);
+				document.getElementById("songs").innerHTML = songs;
+			}
+
+	</script>
+	<table  class="songs" border="0" id="songs"></table>
+	<body>
+</html>
