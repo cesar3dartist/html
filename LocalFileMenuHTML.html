@@ -6,8 +6,16 @@
 		function buildHTML(songs)
 			{
 
-				//document.write(param);
-				document.getElementById("songs").innerHTML = songs;
+				//prints the variable "songs" onto the HTML
+				//document.getElementById("songs").innerHTML = songs;
+				var array = songs.split(",");
+				var html="<br>";
+				for (i=0: i< array.length; ++i)
+					{
+						html+= array[i];
+						html+= "<br>";
+					}
+				document.getElementById("songs").innerHTML = html;
 			}
 
 	</script>
