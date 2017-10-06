@@ -6,7 +6,7 @@
 
 		function test()
 			{
-				var flag= false;
+				var flag= true;
 				if (flag==true)
 					{
 						var testString= "This is my track.mp4, i love this groove.mp3, what the hell-123.mp4";
@@ -24,7 +24,7 @@
 				for (i=0; i< array.length; ++i)
 					{	
 						html+= '<button class="button" ';
-						html+='onclick="addHash('+"'"+array[i]+"'"+')">'
+						html+='onclick="addHash('+"'"+(array[i]).replace(/^.*[\\\/]/, '')+"'"+')">'
 						html+= array[i];
 						html+= "</button>";
 						html+= "<br>";
