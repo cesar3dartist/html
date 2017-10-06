@@ -24,12 +24,18 @@
 				for (i=0; i< array.length; ++i)
 					{	
 						html+= '<button class="button" ';
-						html+='onclick="addHash('+"'"+(array[i]).replace(/^.*[\\\/]/, '')+"'"+')">'
+						//(array[i]).replace(/^.*[\\\/]/, '')
+						html+='onclick="addHash('+"'"+ getSongName(array[i]) +"'"+')">'
 						html+= array[i];
 						html+= "</button>";
 						html+= "<br>";
 					}
 				document.getElementById("songs").innerHTML = html;
+			}
+
+		function getSongName(path)
+			{
+				return(path.replace(/^.*[\\\/]/, ''));
 			}
 
 		function addHash(path)
