@@ -13,18 +13,20 @@
 				for (i=0; i< array.length; ++i)
 					{	
 						html+= '<button class="button" ';
-						html+='onclick="addHash()">'
+						html+='onclick="addHash('+array[i]+')">'
 						html+= array[i];
 						html+= "</button>";
 						html+= "<br>";
 					}
 				document.getElementById("songs").innerHTML = html;
 			}
-		function addHash()
+		function addHash(path)
 			{
-				document.getElementById("songs").innerHTML = "SURPRISE";	
+				//testing that the value is printed
+				//document.getElementById("songs").innerHTML = "SURPRISE";	
+				parent.location.hash = path;
 			}
-			
+
 	</script>
 	<table  class="songs" border="0" id="songs"></table>
 	<body>
