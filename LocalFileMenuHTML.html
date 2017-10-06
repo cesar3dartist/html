@@ -1,8 +1,15 @@
 <html>
-	<body>
+	<body onload="test()">
 	<link rel="stylesheet" href="LocalFileMenuHTML.css">
 	<script>
 		//Called from within UE4 Blueprint
+
+		function test()
+			{
+				var testString= "This is my track.mp4, i love this groove.mp3, what the hell-123.mp4";
+				buildHTML(testString);
+			}
+
 		function buildHTML(songs)
 			{
 
@@ -20,6 +27,7 @@
 					}
 				document.getElementById("songs").innerHTML = html;
 			}
+
 		function addHash(path)
 			{
 				//testing that the value is printed
