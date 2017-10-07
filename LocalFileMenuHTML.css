@@ -3,12 +3,13 @@
 	.button
 		{
 			background-color: #333333; /* Green */
-		    border: none;
-		    padding: 15px 32px;
+		    border-color: white;
+		    border-width: 3px;
 
 		    font-family: Gotham, Arial,sans-serif;
 		    font-weight: normal;
 		    font-size: 40px;
+		    color: white;
 
 		    text-align: center;
 		    text-decoration: none;
