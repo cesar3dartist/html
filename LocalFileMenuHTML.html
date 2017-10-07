@@ -9,22 +9,19 @@
 				var flag= true;
 				if (flag==true)
 					{
-						var testString= "D:/folder/folder/yeah/This is my track.mp4, D:/folder/folder/i love this groove.mp3, D:/folder1/folder2/what the hell-123.mp4";
+						var testString= "D:/folder/folder/yeah/This is my track.mp4, D:/folder/folder/i love this sdsd asdsdasd asd sdgroove.mp3, D:/folder1/folder2/what the hell-123.mp4";
 						buildHTML(testString);
 					}
 			}
-
+		//builds HTML buttons
 		function buildHTML(songs)
 			{
 
-				//prints the variable "songs" onto the HTML
-				//document.getElementById("songs").innerHTML = songs;
 				var array = songs.split(",");
 				var html="<br>";
 				for (i=0; i< array.length; ++i)
 					{	
 						html+= '<button class="button" ';
-						//(array[i]).replace(/^.*[\\\/]/, '')
 						html+='onclick="addHash('+"'"+ array[i] +"'"+')">'
 						html+= getSongName(array[i]);
 						html+= "</button>";
@@ -32,16 +29,14 @@
 					}
 				document.getElementById("songs").innerHTML = html;
 			}
-
+		//receives a path, returns just the name
 		function getSongName(path)
 			{
 				return(path.replace(/^.*[\\\/]/, ''));
 			}
-
+		//adds a hashtag # 
 		function addHash(path)
 			{
-				//testing that the value is printed
-				//document.getElementById("songs").innerHTML = "SURPRISE";	
 				parent.location.hash = path;
 			}
 
